@@ -1,0 +1,106 @@
+.profile-card {
+  background: linear-gradient(145deg, #e71f1f, #e2e9eb);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  transition: transform 0.3s ease;
+}
+box-shadow .profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.profile-card__image {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px solid #007BFF;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+.profile-card__image:hover {
+  border-color: #3da749;
+}
+.profile-card__name {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0b0d03;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.profile-card__name:hover {
+  color: #007BFF;
+}
+.profile-card__bio {
+  font-size: 18px;
+  color: #0a142f;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.profile-card__socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.profile-card__socials a {
+  background-color: #007BFF;
+  color: #e71f1f;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.profile-card__socials a:hover {
+  background-color: #0062cc;
+  border-color: #0062cc;
+}
+.profile-card__socials a:first-child {
+  background-color: #09161f;
+  color: #e71f1f;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.profile-card__socials a:first-child:hover {
+  background-color: black;
+  border-color: black;
+}
+.profile-card__socials a:last-child {
+  background-color: #051a25;
+  color: #e71f1f;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.profile-card__socials a:last-child:hover {
+  background-color: black;
+  border-color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}/*# sourceMappingURL=styles.css.map */
