@@ -33,7 +33,7 @@ export const EmployeeProfile = ({ amulya }: EmployeeProfileProps) => {
         {amulya.map((employee) => (
           <tr key={employee.id}>
             <td>
-              <a href={`#employee-${employee.id}`}>
+              <a href={`employee${employee.firstName}`}>
                 {employee.firstName}
               </a>
             </td>
