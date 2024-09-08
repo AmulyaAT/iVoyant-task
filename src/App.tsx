@@ -1,18 +1,18 @@
-// import { Names } from "./components/Names";
-import {EmployeeDetails} from "./components/Employeedetails";
-import { Route,BrowserRouter as Router, Routes } from "react-router-dom";
-// import { EmployeeProfile } from "./components/EmployeeProfile";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { EmployeeDetails } from "./components/Employeedetails"; // Updated import name
 import { EmployeeInfo } from "./components/EmployeeInfo";
+
 function App() {
   return (
-    
-      <Router>
+    <Router>
       <Routes>
+        <Route path="/" element={<EmployeeDetails />} />
         <Route path="/Employeedetails" element={ <EmployeeDetails /> } />
-        {/* <Route path="/EmployeeProfile" element={<EmployeeProfile amulya={[]} />} /> */}
+        {/* Route for Employee Details Page */}
         <Route path="/Employeedetails/employee/:id" element={<EmployeeInfo />} />
       </Routes>
-      </Router>
+    </Router>
   );
 }
+
 export default App;

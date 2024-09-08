@@ -1,36 +1,18 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { employees } from "../db";
-import { EmployeeInfo } from "./EmployeeInfo";
-type Employee = {
-  id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
-  age: number;
-  department: string;
-  position: string;
-  salary: number;
-};
+import { Employee } from "./EmployeeInfo";
 
 type EmployeeProfileProps = {
   amulya: Employee[];
 };
-export const EmployeeProfile = ({ amulya }: EmployeeProfileProps) => {
-  const [SelectedEmployee, setSelectedEmployee] = useState<Employee|null>(null);
-  const navigate = useNavigate();
-  const handleName = (id: number) => {
-    const employee = employees.find((emp) => emp.id === id)
-    console.log("Selected Employee:", employee)
-    if (employee) {
-      setSelectedEmployee(employee);
-      console.log("employee",employee)
-      navigate(`/Employeedetails/employee/${id}`);
 
-    }
-    
-  
+export const EmployeeProfile = ({ amulya }: EmployeeProfileProps) => {
+  const navigate = useNavigate();
+
+  const handleNameClick = (id: number) => {
+    // Navigate to the details route when an employee name is clicked
+    navigate(`/Employeedetails/employee/${id}`);
   };
+
   return (
     <>
       <table>
@@ -46,16 +28,12 @@ export const EmployeeProfile = ({ amulya }: EmployeeProfileProps) => {
           </tr>
         </thead>
         <tbody>
-          {amulya?.map((employee) => (
+          {amulya.map((employee) => (
             <tr key={employee.id}>
               <td>
                 <span
-                  style={{
-                    cursor: "pointer",
-                    color: "blue",
-                    textDecoration: "underline",
-                  }}
-                  onClick={() => handleName(employee.id)}
+                  style={{ cursor: "pointer", color: "blue", textDecoration: "underline" }}
+                  onClick={() => handleNameClick(employee.id)}
                 >
                   {employee.firstName}
                 </span>
@@ -70,9 +48,6 @@ export const EmployeeProfile = ({ amulya }: EmployeeProfileProps) => {
           ))}
         </tbody>
       </table>
-      {SelectedEmployee && (
-      <EmployeeInfo employee={SelectedEmployee} />
-    )}
-  </>
+    </>
   );
 };
