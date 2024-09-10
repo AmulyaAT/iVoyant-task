@@ -10,7 +10,7 @@ describe("Application", () => {
 });
 
 describe("nested",()=>{
-    it("Dropdown test",()=>{
+    it("application elements test",()=>{
         render(<Application />)
         const joblocationElement=screen.getByRole("combobox")
         expect(joblocationElement).toBeInTheDocument();
@@ -18,5 +18,8 @@ describe("nested",()=>{
 
         const termsElement=screen.getByRole("checkbox")
             expect(termsElement).toBeInTheDocument();
+
+            const submitElement=screen.getByRole("button")
+            expect(submitElement).toBeInTheDocument();
     });
 });
