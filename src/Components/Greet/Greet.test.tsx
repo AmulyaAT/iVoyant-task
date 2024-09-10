@@ -13,6 +13,6 @@ describe("Nested", () => {
   test("Greet render with name", () => {
     render(<Greet name="amulya" />);
     const textElement = screen.getByText("Hello amulya");
-    expect(textElement).toBeInTheDocument();
+    expect(textElement).toBeInTheDocument(); 
   });
 });
