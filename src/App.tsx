@@ -1,4 +1,5 @@
 import './App.css'
+import { DataFetch } from './component/Fetchdata'
 import { Logger } from './component/Logging'
 import { Textinput } from './Components/State/Inputtext'
 import { LoggedIn } from './Components/State/LoggedIn'
@@ -15,6 +16,7 @@ function App() {
       <Textinput/>
       <ToggleSwitches/>
       <Logger/>
+      <DataFetch/>
     </>
   )
 }
