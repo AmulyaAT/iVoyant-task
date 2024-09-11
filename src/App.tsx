@@ -1,4 +1,5 @@
 import './App.css'
+import { Logger } from './component/Logging'
 import { Textinput } from './Components/State/Inputtext'
 import { LoggedIn } from './Components/State/LoggedIn'
 import { ToggleSwitches } from './Components/State/ToggleSwitch'
@@ -13,6 +14,7 @@ function App() {
       <User/>
       <Textinput/>
       <ToggleSwitches/>
+      <Logger/>
     </>
   )
 }
