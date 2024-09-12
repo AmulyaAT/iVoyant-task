@@ -10,17 +10,11 @@ export const UserForm: React.FC = () => {
   const [user, setUser] = useState<User>({name:"",age:0});
   
   const updateName=(newName:string)=>{
-    setUser((prevUser)=>({
-        ...prevUser,
-        name :newName,
-    }))
+    setUser({...user,name:newName})
   }
 
   const updateAge=(newAge:number)=>{
-    setUser((prevUser)=>({
-        ...prevUser,
-        age:newAge,
-    }))
+    setUser({...user,age:newAge})
   }
   return (
     <>
