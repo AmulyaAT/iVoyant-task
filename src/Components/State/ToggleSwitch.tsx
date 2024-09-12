@@ -1,12 +1,17 @@
-import { useState } from "react";
+import React from "react";
 
-export const ToggleSwitches = () => {
-  const [isOn,setIsOn]=useState<boolean>(false)
-    return(
-        <>
-        <button onClick={() => setIsOn(!isOn)}>Toggle
-        {isOn?"Turnoff":"TurnOn"}
-        </button>
-        </>
-    )
-}
+import { useState } from "react";
+ export const Toggle:React.FC=()=>{
+  const[on,setOn]=useState<boolean>(false)
+  const toggle=()=>{
+    setOn(!on)
+    console.log("Toggled",on)
+  }
+  return(
+    <>
+    <button onClick={toggle}>
+      {on ?"switch off" : "Switch on"}
+    </button>
+    </>
+  )
+ }

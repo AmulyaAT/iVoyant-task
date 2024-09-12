@@ -8,7 +8,7 @@ export const SimpleArray:React.FC=()=>{
     }
 
     const removeitem=()=>{
-      setItems(items.slice(1))
+      setItems(items.slice(0,-1))
     }
 
     const clearitems=()=>{
