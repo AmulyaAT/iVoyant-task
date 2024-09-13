@@ -14,11 +14,12 @@ export const Counter:React.FC=()=>{
         setCount(0)
     }
     return(
-        <>
+        <div>
+            <h2>Counter</h2>
         <h2>Count : {count}</h2>
         <button onClick={Increment}>+</button>
         <button onClick={decrement}>-</button>
         <button onClick={clear}>clear</button>
-        </>
+        </div>
     )
 }

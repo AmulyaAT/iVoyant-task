@@ -15,8 +15,8 @@ export const Todo = () => {
     setTasks([]);
   };
   return (
-    <>
-      <h2>TODO</h2>
+    <div>
+      <h2>TODO Planner</h2>
       <input
         type="text"
         value={todo}
@@ -24,12 +24,13 @@ export const Todo = () => {
         placeholder="Add the task"
       />
       <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
+        {tasks.map((task, id) => (
+          <li key={id}>{task}</li>
         ))}
       </ul>
+      
       <button onClick={handleDelete}>Delete</button>
       <button onClick={handleadd}>Add Task</button>
-    </>
+    </div>
   );
 };

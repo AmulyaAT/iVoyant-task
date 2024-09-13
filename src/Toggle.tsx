@@ -9,11 +9,12 @@ export const Toggle = () => {
     console.log("toggle", istoggle ? "dark" : "light");
   }; 
   return (
-    <>
+    <div>
+      <h2>Toggle button</h2>
       <button onClick={handleToggle}>
         Click 
         {istoggle ? "ON" : "OFF"}
       </button>
-    </>
+    </div>
   );
 };
