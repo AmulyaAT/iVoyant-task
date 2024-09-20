@@ -1,14 +1,12 @@
 import React, { useCallback } from "react";
 import { useState } from "react";
 import { ChildForm } from "./ChildForm";
-
 export const ParentForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [age, setAge] = useState<number>(0);
   const handlesubmit = useCallback(() => {
     console.log(`Name is ${name} and Age is ${age}`);
   }, [name, age]);
-
   return (
     <div>
       <input
@@ -23,7 +21,6 @@ export const ParentForm: React.FC = () => {
         onChange={(e) => setAge(Number(e.target.value))}
         placeholder="Enter your age :"
       />
-    
       <ChildForm submit={handlesubmit} />
     </div>
   );

@@ -5,7 +5,7 @@ import React from "react";
 export const Child:React.FC<clicktype>=({Click})=>{
     return(
         <>
-        <button onClick={Click}>Click</button>
+        <button onClick={Click}>Change name</button>
         </>
     )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-
 interface Clicktype {
     Click :()=> void;
 }

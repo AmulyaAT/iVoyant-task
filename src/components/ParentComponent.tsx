@@ -1,8 +1,8 @@
 import  { useCallback, useState } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
-export const Parent=()=>{
-    const [count , setCount]=useState(0)
+export const Parent:React.FC=()=>{
+    const [count , setCount]=useState<number>(0)
     const handleClick = useCallback(()=>{
         setCount(count + 1)
         console.log('handleCLick')
